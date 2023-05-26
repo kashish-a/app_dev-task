@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">quizapp</string>
+    <string name="question">question</string>
+    <string name="opt1">Button</string>
+    <string name="opt2">Button</string>
+    <string name="opt3">Button</string>
+    <string name="opt4">Button</string>
+    <string name="hello_blank_fragment">\n</string>
+</resources>

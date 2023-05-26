@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/intropage">
+
+    <fragment
+        android:id="@+id/intropage"
+        android:name="com.example.quizapp.IntroPage"
+        android:label="intropage"
+        tools:layout="@layout/intropage" >
+
+        <action
+            android:id="@+id/action_intropage_to_genreselection"
+            app:destination="@id/genreselection" />
+    </fragment>
+    <fragment
+        android:id="@+id/congrats1"
+        android:name="com.example.quizapp.Congrats1"
+        android:label="congrats1"
+        tools:layout="@layout/congrats" >
+
+        <action
+            android:id="@+id/action_congrats1_to_quespage1"
+            app:destination="@id/quespage1"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/tryagain1"
+        android:name="com.example.quizapp.Tryagain1"
+        android:label="tryagain1"
+        tools:layout="@layout/tryagain" >
+
+        <action
+            android:id="@+id/action_tryagain1_to_quespage1"
+            app:destination="@id/quespage1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/genreselection"
+        android:name="com.example.quizapp.GenreSelection"
+        android:label="genreselection"
+        tools:layout="@layout/genreselection">
+        <action
+            android:id="@+id/action_genreselection_to_quespage1"
+            app:destination="@+id/quespage1"/>
+        <action
+            android:id="@+id/action_genreselection_to_quespage2"
+            app:destination="@+id/quespage2"/>
+        <action
+            android:id="@+id/action_genreselection_to_quespage3"
+            app:destination="@+id/quespage3"/>
+        <action
+            android:id="@+id/action_genreselection_to_quespage4"
+            app:destination="@+id/quespage4"/>
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/quespage1"
+        android:name="com.example.quizapp.QuizPage1"
+        android:label="quespage1"
+        tools:layout="@layout/quespage" >
+        <action
+            android:id="@+id/action_quespage_to_score"
+            app:destination="@id/score"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quespage1_to_congrats1"
+            app:destination="@+id/congrats1"/>
+        <action
+            android:id="@+id/action_quespage1_to_tryagain1"
+            app:destination="@+id/congrats1"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quespage2"
+        android:name="com.example.quizapp.QuizPage2"
+        android:label="quespage2"
+        tools:layout="@layout/quespage" >
+        <action
+            android:id="@+id/action_quespage_to_score"
+            app:destination="@id/score"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quespage2_to_congrats2"
+            app:destination="@+id/congrats2"/>
+        <action
+            android:id="@+id/action_quespage2_to_tryagain2"
+            app:destination="@+id/congrats2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quespage3"
+        android:name="com.example.quizapp.QuizPage3"
+        android:label="quespage3"
+        tools:layout="@layout/quespage" >
+        <action
+            android:id="@+id/action_quespage_to_score"
+            app:destination="@id/score"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quespage3_to_congrats3"
+            app:destination="@+id/congrats3"/>
+        <action
+            android:id="@+id/action_quespage3_to_tryagain3"
+            app:destination="@+id/congrats3"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quespage4"
+        android:name="com.example.quizapp.QuizPage4"
+        android:label="quespage4"
+        tools:layout="@layout/quespage" >
+        <action
+            android:id="@+id/action_quespage_to_score"
+            app:destination="@id/score"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quespage4_to_congrats4"
+            app:destination="@+id/congrats4"/>
+        <action
+            android:id="@+id/action_quespage4_to_tryagain4"
+            app:destination="@+id/congrats4"></action>
+    </fragment>
+    <fragment
+        android:id="@+id/score"
+        android:name="com.example.quizapp.Score"
+        android:label="score"
+        tools:layout="@layout/score" >
+        <action
+            android:id="@+id/action_score_to_intropage"
+            app:destination="@id/intropage"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

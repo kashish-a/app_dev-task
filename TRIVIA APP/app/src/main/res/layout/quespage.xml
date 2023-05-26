@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color"
+    android:id="@+id/frameLayout2"
+    tools:context=".QuizPage1">
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="1/5"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/tvQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="593dp"
+        android:contentDescription="@string/question"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:lineSpacingExtra="10sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="THE QUESTION" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="171dp"
+        android:layout_height="70dp"
+        android:fontFamily="serif"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutOfOptions" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOfOptions"
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion">
+
+        <Button
+            android:id="@+id/btOption1"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="@string/opt1"
+            android:textSize="18dp"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btOption2"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="@string/opt2"
+            android:textSize="18dp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btOption3"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="@string/opt3"
+            android:textSize="18dp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btOption4"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="@string/opt4"
+            android:textSize="18dp"
+            tools:ignore="VisualLintButtonSize" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
